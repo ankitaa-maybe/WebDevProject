@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"> 
+     
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoMUJ</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="locations.js"></script>  
+    <script src="auto_comp.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="page-header" id="header1">
+        <a href="index.html"><img src="images/globe.jpg" id="header_pic"></a>
+        <div id="header_text"><a href="index.html">GeoMUJ</a></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default" id="navbar1">
+        <div class="container-fluid">
+            <div id="navbar_buttons">
+                <button type="button" class="btn btn-primary" onclick="hostelShow();">Hostels</button>
+                <button type="button" class="btn btn-primary" onclick = "amenitiesShow();">Amenities</button>
+                <button type="button" class="btn btn-primary" onclick = "foodoutletsShow();">Food Outlets</button>
+                <button type="button" class="btn btn-primary" onclick = "sportsShow();">Sport Facilities</button>
+                <button type="button" class="btn btn-primary" onclick = "academicShow();">Academic Facilities</button>
+                <button type="button" class="btn btn-primary" onclick = "otherShow();">Others</button>
+            </div>
+
+            <!-- Search Box -->
+            <form autocomplete="off" action="/action_page.php">
+                <div id="search_box" class="autocomplete">
+                    <input type="text" id="txtbox1" placeholder="Search">
+                </div>
+                <button type="button" class="btn btn-primary" id="search_button" onclick = "searchShow();">Search</button>
+            </form>
+           
+            <!-- Dropdown Menu -->
+            <div class="dropdown" id="dropdown_menu">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">More <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="https://jaipur.manipal.edu/" target="_blank">MUJ Website</a></li>
+                    <li><a href="https://mujslcm.jaipur.manipal.edu:122/" target="_blank">Student Portal</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    
+    <!-- Map Div -->
+    <div id="map"></div>
+    <script src="index.js"></script>
+
+    <!-- Information Panel -->
+    <div id="img_1"></div>
+    <div id="demo">The multi-disciplinary university offers career-oriented courses at all levels, i.e., UG, PG and doctoral and across diverse streams, including Engineering, Architecture, Planning, Fashion Design, Interior Design, Fine Arts, Hospitality, Humanities, Journalism and Mass Communication, Basic Sciences, Law, Commerce, Computer Applications, Management, etc.  Some PG programmes are also available in the research mode. MUJ boasts of best-in-class infrastructure, including state-of-the-art research facilities and a modern, digital library. In line with Manipal University's legacy of providing quality education to its students, the campus uses the latest in technology to impart education.</div>
+
+</body>
+
+</html>
